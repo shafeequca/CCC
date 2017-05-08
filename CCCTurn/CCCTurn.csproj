@@ -90,7 +90,6 @@
     <Compile Include="Owners.Designer.cs">
       <DependentUpon>Owners.cs</DependentUpon>
     </Compile>
-    <Compile Include="sample.cs" />
     <Compile Include="Vehicle.cs">
       <SubType>Form</SubType>
     </Compile>
