@@ -55,7 +55,6 @@ namespace CCCTurn
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             dateTimePicker1.Value = DateTime.Now;
-            //test
             dateTimePicker2.Value = DateTime.Now;
             cboOwner.Text = "";
             cboOwner.SelectedIndex = -1;
