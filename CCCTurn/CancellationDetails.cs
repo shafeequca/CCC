@@ -32,6 +32,7 @@ namespace CCCTurn
         {
             dateTimePicker1.Value = DateTime.Now;
             dateTimePicker2.Value = DateTime.Now;
+            dataGridView1.DataSource = null;
         }
     }
 }
