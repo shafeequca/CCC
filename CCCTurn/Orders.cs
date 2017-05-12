@@ -34,6 +34,7 @@ namespace CCCTurn
         {
             lblVehicleID.Text = "";
             lblRate.Text = "";
+            txtCommission.Text = "";
             txtParty.Text = "";
             comboLoad();
             cboDestination.SelectedIndex = -1;
@@ -45,24 +46,35 @@ namespace CCCTurn
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (cboDestination.SelectedIndex<0)
+            if (cboDestination.SelectedIndex < 0)
+            {
                 MessageBox.Show("Please select a destination");
+                cboDestination.Focus();
+            }
             else if (cboType.Text.Trim() == "")
+            {
                 MessageBox.Show("Please selecet a vehicle type");
-            else if (lblVehicleID.Text=="")
+                cboType.Focus();
+            }
+            else if (lblVehicleID.Text == "")
                 MessageBox.Show("No vehicle available to allot this order");
+            else if (txtCommission.Text == "" || Convert.ToInt32(txtCommission.Text.Trim()) < 0)
+            {
+                MessageBox.Show("Please enter a valid commission amount");
+                txtCommission.Focus();
+            }
             else
             {
                 DialogResult dialogResult = MessageBox.Show("Do you want to save the Order?", "Order Entry", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "insert into Orders(oDate,Party_Name,rateid,Vehicle_Type,Rate,vehicleid,allt_date) values('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + txtParty.Text.Trim() + "','" + cboDestination.SelectedValue + "','" + cboType.Text + "','"+ lblRate.Text +"','" + lblVehicleID.Text.Trim() + "',GETDATE())";
+                    string query = "insert into Orders(oDate,Party_Name,rateid,Vehicle_Type,Rate,vehicleid,allt_date,commission) values('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + txtParty.Text.Trim() + "','" + cboDestination.SelectedValue + "','" + cboType.Text + "','" + lblRate.Text + "','" + lblVehicleID.Text.Trim() + "',GETDATE(),'"+ txtCommission.Text.Trim() +"')";
                     Connection.Instance.ExecuteQueries(query);
-                   
-                   query = "update Vehicles set isAvailable=0 where vehicleid='" + lblVehicleID.Text + "'";
-                   Connection.Instance.ExecuteQueries(query);
 
-                    
+                    query = "update Vehicles set isAvailable=0 where vehicleid='" + lblVehicleID.Text + "'";
+                    Connection.Instance.ExecuteQueries(query);
+
+
                     btnClear_Click(null, null);
                 }
             }

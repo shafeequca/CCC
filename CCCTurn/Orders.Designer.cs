@@ -43,14 +43,18 @@
             this.cboDestination = new System.Windows.Forms.ComboBox();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtCommission = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // txtVehicle
             // 
-            this.txtVehicle.Location = new System.Drawing.Point(122, 134);
+            this.txtVehicle.Location = new System.Drawing.Point(125, 134);
             this.txtVehicle.Name = "txtVehicle";
             this.txtVehicle.ReadOnly = true;
-            this.txtVehicle.Size = new System.Drawing.Size(154, 20);
+            this.txtVehicle.Size = new System.Drawing.Size(186, 20);
             this.txtVehicle.TabIndex = 50;
             // 
             // lblVehicleID
@@ -78,7 +82,7 @@
             // 
             this.lblRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRate.ForeColor = System.Drawing.Color.White;
-            this.lblRate.Location = new System.Drawing.Point(120, 112);
+            this.lblRate.Location = new System.Drawing.Point(127, 112);
             this.lblRate.Name = "lblRate";
             this.lblRate.Size = new System.Drawing.Size(97, 15);
             this.lblRate.TabIndex = 61;
@@ -97,7 +101,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(200, 176);
+            this.btnClear.Location = new System.Drawing.Point(237, 210);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 54;
@@ -107,7 +111,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(119, 176);
+            this.btnSave.Location = new System.Drawing.Point(156, 210);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 52;
@@ -130,8 +134,8 @@
             // 
             this.txtParty.Location = new System.Drawing.Point(125, 9);
             this.txtParty.Name = "txtParty";
-            this.txtParty.Size = new System.Drawing.Size(151, 20);
-            this.txtParty.TabIndex = 45;
+            this.txtParty.Size = new System.Drawing.Size(186, 20);
+            this.txtParty.TabIndex = 0;
             // 
             // label1
             // 
@@ -148,10 +152,10 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(125, 35);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
-            this.dateTimePicker1.TabIndex = 66;
+            this.dateTimePicker1.Size = new System.Drawing.Size(187, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // label9
             // 
@@ -169,10 +173,10 @@
             this.cboDestination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboDestination.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboDestination.FormattingEnabled = true;
-            this.cboDestination.Location = new System.Drawing.Point(122, 63);
+            this.cboDestination.Location = new System.Drawing.Point(125, 62);
             this.cboDestination.Name = "cboDestination";
-            this.cboDestination.Size = new System.Drawing.Size(154, 21);
-            this.cboDestination.TabIndex = 68;
+            this.cboDestination.Size = new System.Drawing.Size(187, 21);
+            this.cboDestination.TabIndex = 2;
             // 
             // cboType
             // 
@@ -185,10 +189,10 @@
             "40 DA",
             "40 Trailor",
             "40 Multi"});
-            this.cboType.Location = new System.Drawing.Point(122, 89);
+            this.cboType.Location = new System.Drawing.Point(125, 88);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(154, 21);
-            this.cboType.TabIndex = 69;
+            this.cboType.Size = new System.Drawing.Size(186, 21);
+            this.cboType.TabIndex = 3;
             this.cboType.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
             // 
             // label10
@@ -202,12 +206,56 @@
             this.label10.TabIndex = 70;
             this.label10.Text = "Vehicle Type";
             // 
+            // txtCommission
+            // 
+            this.txtCommission.Location = new System.Drawing.Point(125, 160);
+            this.txtCommission.Name = "txtCommission";
+            this.txtCommission.Size = new System.Drawing.Size(186, 20);
+            this.txtCommission.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 15);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "Commission";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Order Type";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(130, 187);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 74;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(292, 216);
+            this.ClientSize = new System.Drawing.Size(323, 245);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtCommission);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cboDestination);
@@ -223,7 +271,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtParty);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Orders";
@@ -254,5 +302,9 @@
         private System.Windows.Forms.ComboBox cboDestination;
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCommission;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
