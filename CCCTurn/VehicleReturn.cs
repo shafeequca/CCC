@@ -26,9 +26,9 @@ namespace CCCTurn
         }
         private void comboLoad()
         {
-            string query = "select vehicleid,Vehicle_name from Vehicles  where isAvailable=0 order By Vehicle_name";
+            string query = "select vehicleid,Vehicle_Number from Vehicles  where isAvailable=0 order By Vehicle_Number";
             cboVehicle.DataSource = Connection.Instance.ShowDataInGridView(query);
-            cboVehicle.DisplayMember = "Vehicle_name";
+            cboVehicle.DisplayMember = "Vehicle_Number";
             cboVehicle.ValueMember = "vehicleid";
             isStart = false;
         }

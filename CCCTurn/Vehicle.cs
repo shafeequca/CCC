@@ -43,7 +43,7 @@ namespace CCCTurn
         {
             try
             {
-                string query = "select v.*,o.Owner_Name from Vehicles v, owners o where v.ownid=o.ownid and v.Vehicle_Name like '%" + txtSearch.Text.Trim() + "%'  order by o.ownid,v.Vehicle_name";
+                string query = "select v.*,o.Owner_Name from Vehicles v, owners o where v.ownid=o.ownid and v.Vehicle_Number like '%" + txtSearch.Text.Trim() + "%'  order by o.ownid,v.Vehicle_Number";
                 dataGridView1.DataSource = Connection.Instance.ShowDataInGridView(query);
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[3].Visible = false;

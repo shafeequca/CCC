@@ -85,9 +85,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(17, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 15);
+            this.label6.Size = new System.Drawing.Size(95, 15);
             this.label6.TabIndex = 79;
-            this.label6.Text = "Vehicle Name";
+            this.label6.Text = "Vehicle Number";
             // 
             // btnClear
             // 
@@ -182,7 +182,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 41);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 91;
@@ -218,7 +218,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VehicleReturn";

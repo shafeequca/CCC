@@ -22,7 +22,7 @@ namespace CCCTurn
         }
         private void GridShow()
         {
-            string query = "select o.oid as Order_No,convert(varchar, o.Odate,105) as Order_Date,o.Party_Name,r.Location as Destination,v.Vehicle_Name,v.Vehicle_Number,o.Vehicle_Type,o.Rate,c.Reason  from Orders o inner join Rate r on r.rateid=o.rateid INNER JOIN Vehicles v on v.vehicleid=o.vehicleid inner join OrderCancellation c on c.oid=o.oid where oDate>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and oDate<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'";
+            string query = "select o.oid as Order_No,convert(varchar, o.Odate,105) as Order_Date,o.Party_Name,r.Location as Destination,v.Vehicle_Number,o.Vehicle_Type,o.Rate,o.commission,c.Reason  from Orders o inner join Rate r on r.rateid=o.rateid INNER JOIN Vehicles v on v.vehicleid=o.vehicleid inner join OrderCancellation c on c.oid=o.oid where oDate>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and oDate<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'";
             dataGridView1.DataSource = Connection.Instance.ShowDataInGridView(query);
         }
 

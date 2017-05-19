@@ -14,6 +14,14 @@ namespace CCCTurn
         public Orders()
         {
             InitializeComponent();
+            this.txtCommission.KeyPress += new KeyPressEventHandler(NumberOnly_KeyPress);
+
+        }
+
+        private void NumberOnly_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar == 8 || e.KeyChar == 46 || e.KeyChar == 13 || (e.KeyChar >= 48 && e.KeyChar <= 57)))
+                e.Handled = true;
         }
         private void Orders_Load(object sender, EventArgs e)
         {
@@ -41,6 +49,7 @@ namespace CCCTurn
             cboType.SelectedIndex = -1;
             txtVehicle.Text = "";
             dateTimePicker1.Value = DateTime.Now;
+            rbtCoastal.Checked = true;
             txtParty.Focus();
         }
 
@@ -58,7 +67,7 @@ namespace CCCTurn
             }
             else if (lblVehicleID.Text == "")
                 MessageBox.Show("No vehicle available to allot this order");
-            else if (txtCommission.Text == "" || Convert.ToInt32(txtCommission.Text.Trim()) < 0)
+            else if (txtCommission.Text == "" || Convert.ToDouble(txtCommission.Text.Trim()) <= 0)
             {
                 MessageBox.Show("Please enter a valid commission amount");
                 txtCommission.Focus();
@@ -68,7 +77,8 @@ namespace CCCTurn
                 DialogResult dialogResult = MessageBox.Show("Do you want to save the Order?", "Order Entry", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    string query = "insert into Orders(oDate,Party_Name,rateid,Vehicle_Type,Rate,vehicleid,allt_date,commission) values('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + txtParty.Text.Trim() + "','" + cboDestination.SelectedValue + "','" + cboType.Text + "','" + lblRate.Text + "','" + lblVehicleID.Text.Trim() + "',GETDATE(),'"+ txtCommission.Text.Trim() +"')";
+                    string order_type = rbtCoastal.Checked ? "coastal" : "exim";
+                    string query = "insert into Orders(oDate,Party_Name,rateid,Vehicle_Type,Rate,vehicleid,allt_date,commission,order_type) values('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + txtParty.Text.Trim() + "','" + cboDestination.SelectedValue + "','" + cboType.Text + "','" + lblRate.Text + "','" + lblVehicleID.Text.Trim() + "',GETDATE(),'"+ txtCommission.Text.Trim() +"','"+ order_type +"')";
                     Connection.Instance.ExecuteQueries(query);
 
                     query = "update Vehicles set isAvailable=0 where vehicleid='" + lblVehicleID.Text + "'";

@@ -33,7 +33,7 @@ namespace CCCTurn
         {
             try
             {
-                string query = "select o.oid as Order_No,oDate as Order_Date,r.Location as Destination,o.Vehicle_Type,v.Vehicle_name from orders o inner join Vehicles v on o.vehicleid=v.vehicleid inner join rate r on o.rateid=r.rateid where o.isCompleted=0  order by o.oid desc";
+                string query = "select o.oid as Order_No,oDate as Order_Date,r.Location as Destination,o.Vehicle_Type,v.Vehicle_Number from orders o inner join Vehicles v on o.vehicleid=v.vehicleid inner join rate r on o.rateid=r.rateid where o.isCompleted=0  order by o.oid desc";
 
                 //if (cboDestination.SelectedIndex >= 0)
                 //{

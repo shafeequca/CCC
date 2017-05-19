@@ -46,7 +46,8 @@
             this.txtCommission = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtCoastal = new System.Windows.Forms.RadioButton();
+            this.rbtExim = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // txtVehicle
@@ -235,16 +236,29 @@
             this.label5.TabIndex = 73;
             this.label5.Text = "Order Type";
             // 
-            // radioButton1
+            // rbtCoastal
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(130, 187);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 74;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtCoastal.AutoSize = true;
+            this.rbtCoastal.Checked = true;
+            this.rbtCoastal.ForeColor = System.Drawing.Color.White;
+            this.rbtCoastal.Location = new System.Drawing.Point(130, 187);
+            this.rbtCoastal.Name = "rbtCoastal";
+            this.rbtCoastal.Size = new System.Drawing.Size(60, 17);
+            this.rbtCoastal.TabIndex = 74;
+            this.rbtCoastal.TabStop = true;
+            this.rbtCoastal.Text = "Coastal";
+            this.rbtCoastal.UseVisualStyleBackColor = true;
+            // 
+            // rbtExim
+            // 
+            this.rbtExim.AutoSize = true;
+            this.rbtExim.ForeColor = System.Drawing.Color.White;
+            this.rbtExim.Location = new System.Drawing.Point(215, 186);
+            this.rbtExim.Name = "rbtExim";
+            this.rbtExim.Size = new System.Drawing.Size(47, 17);
+            this.rbtExim.TabIndex = 75;
+            this.rbtExim.Text = "Exim";
+            this.rbtExim.UseVisualStyleBackColor = true;
             // 
             // Orders
             // 
@@ -252,7 +266,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(323, 245);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbtExim);
+            this.Controls.Add(this.rbtCoastal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCommission);
             this.Controls.Add(this.label4);
@@ -305,6 +320,7 @@
         private System.Windows.Forms.TextBox txtCommission;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtCoastal;
+        private System.Windows.Forms.RadioButton rbtExim;
     }
 }
