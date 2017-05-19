@@ -53,6 +53,12 @@
     <Compile Include="AllotmentDetails.Designer.cs">
       <DependentUpon>AllotmentDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllotmentDetailsAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotmentDetailsAll.Designer.cs">
+      <DependentUpon>AllotmentDetailsAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="CancellationDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,11 @@
       <DependentUpon>CancellationDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Dataset\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +124,9 @@
     <EmbeddedResource Include="AllotmentDetails.resx">
       <DependentUpon>AllotmentDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllotmentDetailsAll.resx">
+      <DependentUpon>AllotmentDetailsAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CancellationDetails.resx">
       <DependentUpon>CancellationDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +166,17 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Dataset\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1462123393_tick_16_converted.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
