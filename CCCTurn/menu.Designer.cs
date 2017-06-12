@@ -45,6 +45,7 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderedItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allottmentDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,7 +164,8 @@
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saleSheetToolStripMenuItem,
-            this.orderedItemsToolStripMenuItem});
+            this.orderedItemsToolStripMenuItem,
+            this.allottmentDetailToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
@@ -171,16 +173,23 @@
             // saleSheetToolStripMenuItem
             // 
             this.saleSheetToolStripMenuItem.Name = "saleSheetToolStripMenuItem";
-            this.saleSheetToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.saleSheetToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.saleSheetToolStripMenuItem.Text = "Allottment Details";
             this.saleSheetToolStripMenuItem.Click += new System.EventHandler(this.saleSheetToolStripMenuItem_Click);
             // 
             // orderedItemsToolStripMenuItem
             // 
             this.orderedItemsToolStripMenuItem.Name = "orderedItemsToolStripMenuItem";
-            this.orderedItemsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.orderedItemsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.orderedItemsToolStripMenuItem.Text = "Cancelled Orders";
             this.orderedItemsToolStripMenuItem.Click += new System.EventHandler(this.orderedItemsToolStripMenuItem_Click);
+            // 
+            // allottmentDetailToolStripMenuItem
+            // 
+            this.allottmentDetailToolStripMenuItem.Name = "allottmentDetailToolStripMenuItem";
+            this.allottmentDetailToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.allottmentDetailToolStripMenuItem.Text = "Allottment Details(Date Wise) ";
+            this.allottmentDetailToolStripMenuItem.Click += new System.EventHandler(this.allottmentDetailToolStripMenuItem_Click);
             // 
             // menu
             // 
@@ -224,5 +233,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saleSheetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderedItemsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allottmentDetailToolStripMenuItem;
     }
 }

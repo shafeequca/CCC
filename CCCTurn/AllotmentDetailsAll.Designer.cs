@@ -48,6 +48,7 @@
             this.btnPrint.TabIndex = 113;
             this.btnPrint.Text = "&Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnShow
             // 
@@ -58,6 +59,7 @@
             this.btnShow.TabIndex = 112;
             this.btnShow.Text = "&Show";
             this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnRefresh
             // 
@@ -68,6 +70,7 @@
             this.btnRefresh.TabIndex = 111;
             this.btnRefresh.Text = "&Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dateTimePicker2
             // 
@@ -151,6 +154,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Allotment Details";
+            this.Load += new System.EventHandler(this.AllotmentDetailsAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
