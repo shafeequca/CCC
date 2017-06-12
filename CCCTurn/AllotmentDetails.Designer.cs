@@ -180,6 +180,7 @@
             this.btnPrint.TabIndex = 101;
             this.btnPrint.Text = "&Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // AllotmentDetails
             // 

@@ -26,9 +26,10 @@ namespace CCCTurn
         private void GridShow()
         {
             string query = "select ROW_NUMBER() OVER(ORDER BY (SELECT 1)) AS Sl_No,convert(varchar, o.Odate,105) as Order_Date,o.Party_Name,r.Location as Destination,v.Vehicle_Number,o.Vehicle_Type,o.Order_Type,o.Rate,o.Commission, CASE WHEN o.isCompleted=1 and isCancelled=0 then 'Delivered' when isCancelled=1 then 'Cancelled' else 'Not Delivered' END as Status from Orders o inner join Rate r on r.rateid=o.rateid INNER JOIN Vehicles v on v.vehicleid=o.vehicleid where oDate>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and oDate<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'";
-            dataGridView1.DataSource = Connection.Instance.ShowDataInGridView(query);
             try
             {
+                dataGridView1.DataSource = Connection.Instance.ShowDataInGridView(query);
+
                 System.Data.DataColumn Date_From = new System.Data.DataColumn("Date_From", typeof(System.DateTime));
                 Date_From.DefaultValue = dateTimePicker1.Value;
                 System.Data.DataColumn Date_To = new System.Data.DataColumn("Date_To", typeof(System.DateTime));

@@ -113,12 +113,25 @@
     <Compile Include="Owners.Designer.cs">
       <DependentUpon>Owners.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptCancellationDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCancellationDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Reports\rptAllottmentDetailsAll.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptAllottmentDetailsAll.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\rptAllottmentDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAllottmentDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Vehicle.cs">
       <SubType>Form</SubType>
@@ -164,10 +177,19 @@
     <EmbeddedResource Include="Owners.resx">
       <DependentUpon>Owners.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCancellationDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCancellationDetails.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptAllottmentDetailsAll.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptAllottmentDetailsAll.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptAllottmentDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAllottmentDetails.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle.resx">
       <DependentUpon>Vehicle.cs</DependentUpon>
