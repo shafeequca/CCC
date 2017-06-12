@@ -48,6 +48,7 @@
             this.btnPrint.TabIndex = 113;
             this.btnPrint.Text = "&Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnShow
             // 
@@ -153,6 +154,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancellation Details";
+            this.Load += new System.EventHandler(this.CancellationDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

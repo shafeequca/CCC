@@ -59,7 +59,7 @@ namespace CCCTurn
                 System.Data.DataColumn Date_From = new System.Data.DataColumn("Date_From", typeof(System.DateTime));
                 Date_From.DefaultValue = dateTimePicker1.Value;
                 System.Data.DataColumn Date_To = new System.Data.DataColumn("Date_To", typeof(System.DateTime));
-                Date_To.DefaultValue = dateTimePicker1.Value;
+                Date_To.DefaultValue = dateTimePicker2.Value;
                 System.Data.DataColumn Owner = new System.Data.DataColumn("Owner", typeof(System.String));
                 Owner.DefaultValue = cboOwner.GetItemText(cboOwner.SelectedItem);
                 System.Data.DataColumn Vehicle = new System.Data.DataColumn("Vehicle", typeof(System.String));

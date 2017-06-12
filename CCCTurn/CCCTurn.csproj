@@ -132,6 +132,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptAllottmentDetails.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Vehicle.cs">
       <SubType>Form</SubType>
@@ -190,6 +191,7 @@
     <EmbeddedResource Include="Reports\rptAllottmentDetails.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptAllottmentDetails.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle.resx">
       <DependentUpon>Vehicle.cs</DependentUpon>
