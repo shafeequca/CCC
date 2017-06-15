@@ -237,6 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1462123393_tick_16_converted.ico" />
+    <Content Include="sqlFile.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
