@@ -48,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.rbtCoastal = new System.Windows.Forms.RadioButton();
             this.rbtExim = new System.Windows.Forms.RadioButton();
+            this.btnVehicleList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtVehicle
@@ -55,7 +56,7 @@
             this.txtVehicle.Location = new System.Drawing.Point(125, 134);
             this.txtVehicle.Name = "txtVehicle";
             this.txtVehicle.ReadOnly = true;
-            this.txtVehicle.Size = new System.Drawing.Size(186, 20);
+            this.txtVehicle.Size = new System.Drawing.Size(114, 20);
             this.txtVehicle.TabIndex = 50;
             // 
             // lblVehicleID
@@ -187,7 +188,7 @@
             "20 DA",
             "20 Trailor",
             "20 Multi",
-            "40 DA",
+            "40 S Axel",
             "40 Trailor",
             "40 Multi"});
             this.cboType.Location = new System.Drawing.Point(125, 88);
@@ -260,12 +261,23 @@
             this.rbtExim.Text = "Exim";
             this.rbtExim.UseVisualStyleBackColor = true;
             // 
+            // btnVehicleList
+            // 
+            this.btnVehicleList.Location = new System.Drawing.Point(245, 132);
+            this.btnVehicleList.Name = "btnVehicleList";
+            this.btnVehicleList.Size = new System.Drawing.Size(66, 23);
+            this.btnVehicleList.TabIndex = 76;
+            this.btnVehicleList.Text = "Veh. &List";
+            this.btnVehicleList.UseVisualStyleBackColor = true;
+            this.btnVehicleList.Click += new System.EventHandler(this.btnVehicleList_Click);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(323, 245);
+            this.Controls.Add(this.btnVehicleList);
             this.Controls.Add(this.rbtExim);
             this.Controls.Add(this.rbtCoastal);
             this.Controls.Add(this.label5);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rbtCoastal;
         private System.Windows.Forms.RadioButton rbtExim;
+        private System.Windows.Forms.Button btnVehicleList;
     }
 }

@@ -17,7 +17,11 @@ namespace CCCTurn
             this.txtCommission.KeyPress += new KeyPressEventHandler(NumberOnly_KeyPress);
 
         }
-
+        public void  setVehicle(string vehId,string VehNo)
+        {
+            lblVehicleID.Text = vehId;
+            txtVehicle.Text = VehNo;
+        }
         private void NumberOnly_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(e.KeyChar == 8 || e.KeyChar == 46 || e.KeyChar == 13 || (e.KeyChar >= 48 && e.KeyChar <= 57)))
@@ -135,6 +139,18 @@ namespace CCCTurn
                 lblRate.Text = "";
             }
 
+        }
+
+        private void btnVehicleList_Click(object sender, EventArgs e)
+        {
+            if (lblVehicleID.Text != "")
+            {
+                VehicleTurnList tl = new VehicleTurnList();
+                tl.vehType = cboType.Text;
+                tl.ord = this;
+                tl.ShowDialog();
+            }
+            
         }
 
     }

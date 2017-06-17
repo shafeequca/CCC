@@ -154,6 +154,12 @@
     <Compile Include="VehicleReturn.Designer.cs">
       <DependentUpon>VehicleReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehicleTurnList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleTurnList.Designer.cs">
+      <DependentUpon>VehicleTurnList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AllotmentDetails.resx">
       <DependentUpon>AllotmentDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
     </Compile>
     <EmbeddedResource Include="VehicleReturn.resx">
       <DependentUpon>VehicleReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleTurnList.resx">
+      <DependentUpon>VehicleTurnList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
